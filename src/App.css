@@ -1,0 +1,14 @@
+.product-hero-swiper .swiper-pagination {
+  bottom: 10px !important;
+}
+.product-hero-swiper .swiper-pagination-bullet {
+  background: rgba(255, 255, 255, 0.6);
+  opacity: 1;
+  width: 7px;
+  height: 7px;
+}
+.product-hero-swiper .swiper-pagination-bullet-active {
+  background: #3b82f6;
+  width: 22px;
+  border-radius: 999px;
+}
