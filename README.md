@@ -1,18 +1,117 @@
-# React + Vite
+# 🛒 A.K E-Commerce
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, fully responsive **E-commerce web application** built using  
+**React, Redux Toolkit, RTK Query, and Vite**.
 
-Currently, two official plugins are available:
+This project focuses on real-world frontend architecture, scalable state
+management, performance optimization, and clean UI/UX practices.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🔗 **Live Demo:** https://ecommerce-webapp-byamit.vercel.app/  
+📦 **GitHub Repository:** https://github.com/AmitFrontEnd/Ecommerce
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+-  Product listing with dynamic routing
+-  Search functionality
+-  Wishlist management
+-  Cart with quantity control
+-  Persistent cart & wishlist using **localStorage**
+-  Fast and efficient data fetching with **RTK Query**
+-  Fully responsive UI (mobile, tablet & desktop)
+-  Dark mode support
+-  Toast notifications for user actions
+-  Client-side routing with **React Router**
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
 
-# ecommerce
+##  Tech Stack
+
+### Frontend
+- **React (Vite)**
+- **Redux Toolkit**
+- **RTK Query**
+- **React Router DOM**
+- **Tailwind CSS**
+- **Lucide Icons**
+- **Sonner (Toast Notifications)**
+
+### State Management
+- Global state handled using **Redux Toolkit**
+- API calls managed via **RTK Query**
+- Cart & Wishlist persisted using **localStorage**
+
+---
+
+## 🛒 Cart & Wishlist Persistence
+
+- Cart and Wishlist data are stored in **localStorage**
+- Redux store is **preloaded from localStorage** on application startup
+- Any update to cart or wishlist automatically syncs back to localStorage
+
+```js
+preloadedState: {
+  cartItems: loadFromLocalStorage("cart"),
+  wishlist: loadFromLocalStorage("wishList"),
+}
+Routing & Deployment
+Client-side routing implemented using React Router
+
+Refresh and direct URL access issues fixed on Vercel using rewrite rules
+
+vercel.json
+{
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/" }
+  ]
+}
+🧪 Installation & Setup
+# Clone the repository
+git clone https://github.com/AmitFrontEnd/Ecommerce
+
+# Navigate to the project directory
+cd Ecommerce
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
+📦 Production Build
+npm run build
+An optimized production build is generated using Vite.
+
+What I Learned
+Building a real-world architecture using Redux Toolkit
+
+Efficient API handling with RTK Query
+
+Persisting Redux state with localStorage
+
+Performance optimization using useMemo
+
+Handling client-side routing issues in production
+
+Creating clean, responsive UI using Tailwind CSS
+
+Future Improvements
+User authentication
+
+Payment gateway integration
+
+Admin dashboard
+
+Order history
+
+Product filtering and sorting
+
+Acknowledgements
+Fake Store API / Public APIs
+
+Redux Toolkit Documentation
+
+Tailwind CSS
+
+⭐ If you like this project, consider giving it a star — it really helps!
+
