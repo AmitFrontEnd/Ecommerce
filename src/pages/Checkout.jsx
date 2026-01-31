@@ -8,8 +8,10 @@ import { Label } from "@/components/ui/label";
 import { ShoppingBag, CreditCard, Truck, ShieldCheck } from "lucide-react";
 import { useSelector } from "react-redux";
 import { useForm } from "react-hook-form";
+import { Navigate, useNavigate } from "react-router-dom";
 
 const Checkout = () => {
+  const navigate = useNavigate();
   const items = useSelector((state) => state.cartItems) || [];
   const [paymentMethod, setPaymentMethod] = useState("card");
 
@@ -50,7 +52,10 @@ const Checkout = () => {
           <p className="text-slate-600 dark:text-slate-300 mt-2">
             Add some items to checkout.
           </p>
-          <Button className="mt-6 bg-blue-600 hover:bg-blue-700 text-white w-full cursor-pointer">
+          <Button
+            className="mt-6 bg-blue-600 hover:bg-blue-700 text-white w-full cursor-pointer"
+            onClick={() => navigate("/collection")}
+          >
             Continue Shopping
           </Button>
         </Card>

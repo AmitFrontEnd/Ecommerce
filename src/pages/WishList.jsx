@@ -14,8 +14,10 @@ import { useGetAllProductsQuery } from "@/services/apiSlice";
 import { useSelector, useDispatch } from "react-redux";
 import { removeWishListItem } from "store/wishListSlice";
 import { addCartItem } from "store/cartSlice";
+import { useNavigate } from "react-router-dom";
 
 const Wishlist = () => {
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const { data: allProducts = [] } = useGetAllProductsQuery();
 
@@ -65,6 +67,7 @@ const Wishlist = () => {
           <Button
             size="lg"
             className="bg-blue-600 hover:bg-blue-700 rounded-xl text-white cursor-pointer"
+            onClick={() => navigate("/collection")}
           >
             Continue Shopping
           </Button>
@@ -424,6 +427,7 @@ const Wishlist = () => {
             <Button
               size="lg"
               className="bg-blue-600 hover:bg-blue-700 rounded-xl w-full sm:w-auto text-white cursor-pointer"
+              onClick={() => navigate("/collection")}
             >
               Continue Shopping
             </Button>
